@@ -103,7 +103,7 @@ convnet = regression(convnet, optimizer='adam', learning_rate=LR, loss='categori
 model = tflearn.DNN(convnet, tensorboard_dir='log', tensorboard_verbose = 0)
 
 
-model.fit({'input': X}, {'targets': Y}, n_epoch=3, validation_set=({'input': test_x}, {'targets': test_y}), snapshot_step=500, show_metric=True, run_id=MODEL_NAME)
+model.fit({'input': X}, {'targets': Y}, n_epoch=10, validation_set=({'input': test_x}, {'targets': test_y}), snapshot_step=500, show_metric=True, run_id=MODEL_NAME)
 
 import matplotlib.pyplot as plt
 
